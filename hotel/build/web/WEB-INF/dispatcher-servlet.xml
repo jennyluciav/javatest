@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
+    
+    <mvc:view-controller path="busquedacodigo.htm" view-name="pagina1"/>
+    <mvc:view-controller path="busquedanombre.htm" view-name="pagina2"/>
+    
+    
+    <mvc:view-controller path="index.htm" view-name="index"/> 
+    <mvc:view-controller path="inicio.htm" view-name="principal"/> 
+    <mvc:view-controller path="principal" view-name="principal"/> 
+        
+    <mvc:view-controller path="lista1.htm" view-name="catalogo_lista"/> 
+    <mvc:view-controller path="lista3.htm" view-name="persona"/> 
+    <mvc:view-controller path="lista4.htm" view-name="persona_lista"/>     
+    
+    <mvc:view-controller path="listapersona.htm" view-name="persona_listar"/> 
+    <mvc:view-controller path="listahabitacion.htm" view-name="tipo_habitacion_listar"/> 
+    
+    
+    <mvc:view-controller path="catalogo_tabla.htm" view-name="catalogo"/> 
+    <mvc:view-controller path="usuario_tabla.htm" view-name="usuario"/> 
+    <mvc:view-controller path="habitacion_tabla.htm" view-name="habitacion"/> 
+    <mvc:view-controller path="tipo_habitacion_tabla.htm" view-name="tipo_habitacion"/>
+    <mvc:view-controller path="reserva_habitacion_tabla.htm" view-name="reserva_habitacion"/> 
+    
+    <context:component-scan base-package="controlador"/>
+    
+    
+    <!--
+    Most controllers will use the ControllerClassNameHandlerMapping above, but
+    for the index controller we are using ParameterizableViewController, so we must
+    define an explicit mapping for it.
+    -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index.htm">indexController</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+
+    <!--
+    The index controller.
+    -->
+    <bean name="indexController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="index" />
+
+</beans>
