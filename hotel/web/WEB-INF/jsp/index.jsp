@@ -16,8 +16,6 @@
 <script src="complementos/js/principal.js" type="text/javascript"></script>
 
         
-<script src="../../../../../../C:/Users/jenny/Documents/NetBeansProjects/rokagym_website/web/src-rg/js/app.js" type="text/javascript"></script>
-        
     </head>
 
     <body>
