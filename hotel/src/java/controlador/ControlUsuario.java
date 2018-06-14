@@ -28,7 +28,8 @@ public class ControlUsuario {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String respuesta(@RequestParam("txtUsuario") String usuario,@RequestParam("txtClave") String clave , Model m){
+    public String respuesta(@RequestParam("txtUsuario") String usuario,
+            @RequestParam("txtClave") String clave , Model m){
         if(usuario.equals("") || clave.equals("") ){
             m.addAttribute("mensaje","Ingrese datos correctos");
             return "index";

@@ -1,0 +1,154 @@
+body {
+    overflow-x: hidden;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.dropdown-menu {
+    left: -45px !important;
+}
+
+.has-error small{
+	color: red;
+}
+
+.head {
+    font-family: Monaco, Courier New, Courier, monospace;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 20px;
+    opacity: .9;
+    border: 2px solid #d0d0d0;
+    box-shadow: 0 0 8px #d0d0d0;
+}
+
+.label {
+    margin-top: 17px;
+}
+
+.mains {
+    padding: 10px;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.ventas {
+    color: #fff;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.ventabtn {
+    background-color: #fff;
+    border: 1px solid #07BDE4;
+    color: #9D9EA4;
+}
+
+.ventabtn:hover {
+    background-color: #07BDE4;
+    color: #fff;
+}
+
+#disabledTextInput, #iva, #sub, #numVentas, #fecha, #numFac {
+    /*background-color: #103B6C;*/
+    /*color: #fff;*/
+}
+
+#disabledTextInput::-webkit-input-placeholder {
+    /*color: orange;*/
+}
+
+#disabledTextInput::-moz-input-placeholder {
+    /*color: orange;*/
+}
+
+#iva::-webkit-input-placeholder {
+    color: orange;
+}
+
+#iva::-moz-input-placeholder {
+    color: orange;
+}
+
+#sub::-webkit-input-placeholder {
+    color: orange;
+}
+
+#sub::-moz-input-placeholder {
+    color: orange;
+}
+
+#numFac::-webkit-input-placeholder {
+    color: orange;
+}
+
+#numFac::-moz-input-placeholder {
+    color: orange;
+}
+
+.main {
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 0 8px #d0d0d0;
+    padding: 20px;
+    margin: 20px;
+}
+
+.tooltips {
+    cursor: pointer;
+}
+
+.main {
+    width: 500px;
+    margin: auto;
+}
+
+.center {
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+}
+
+hr {
+    border: 2px solid #f84d18;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.rand {
+    font-size: 20px;
+    width: 540px;
+    padding: 20px;
+    color: #000;
+    border-top: 2px solid #d0d0d0;
+    box-shadow: 0 0 18px #d0d0d0;
+}
+
+thead {
+    text-align: center;
+}
+
+
+#tabla {
+    overflow-y: scroll;
+    height: 200px;
+}
+
+#noActivo {
+    overflow-y: scroll;
+    height: 500px;
+}
+
+.right {
+    float: right;
+}
+
